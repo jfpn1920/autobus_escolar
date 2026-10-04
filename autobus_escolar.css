@@ -1,0 +1,86 @@
+/* ===== Estilos generales ===== */
+/* Quita márgenes por defecto y facilita el cálculo de tamaños */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Variables de color para reutilizarlas en todo el diseño */
+:root {
+    --fondo: #fffbeb;
+    --bus: #facc15;
+    --libre: #22c55e;
+    --ocupado: #ef4444;
+    --texto: #1f2937;
+}
+/* Fondo y tipografía de toda la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    padding: 24px 16px;
+}
+/* ===== Contenedor y encabezado ===== */
+/* Caja central que agrupa todo el contenido */
+.contenedor { max-width: 420px; margin: 0 auto; text-align: center; }
+/* Encabezado centrado */
+.encabezado { margin-bottom: 20px; }
+.encabezado h1 { margin-bottom: 6px; }
+.encabezado p { color: #6b7280; }
+/* ===== Resumen y leyenda ===== */
+/* Fila con los contadores */
+.resumen { display: flex; gap: 12px; margin-bottom: 12px; }
+/* Cada tarjeta del resumen */
+.dato { flex: 1; padding: 10px; background: #fff; border-radius: 10px; }
+.dato span { display: block; font-size: 1.8rem; font-weight: bold; }
+.dato small { color: #6b7280; }
+/* Leyenda de colores */
+.leyenda { display: flex; gap: 20px; justify-content: center; margin-bottom: 16px; font-size: 0.9rem; }
+/* Cuadrito de color de la leyenda */
+.muestra { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: middle; }
+.muestra.libre { background: var(--libre); }
+.muestra.ocupado { background: var(--ocupado); }
+/* ===== Autobús ===== */
+/* Cuerpo amarillo del autobús con las esquinas del frente redondeadas */
+.bus {
+    padding: 16px;
+    background: var(--bus);
+    border: 4px solid #a16207;
+    border-radius: 40px 40px 12px 12px;
+}
+/* Zona del conductor: texto a la izquierda y volante a la derecha */
+.conductor {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+    background: #fde68a;
+    border-radius: 10px;
+}
+/* Cada fila: asientos a los lados y pasillo en el centro */
+.fila { display: flex; justify-content: center; gap: 8px; margin-bottom: 10px; }
+/* Espacio vacío del pasillo */
+.pasillo { width: 40px; }
+/* ===== Asientos ===== */
+/* Estilo base de cada asiento */
+.asiento {
+    width: 52px;
+    height: 52px;
+    border: 3px solid #fff;
+    border-radius: 10px 10px 4px 4px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: var(--libre);
+    transition: transform 0.15s;
+}
+/* Efecto al pasar el mouse por un asiento */
+.asiento:hover { transform: scale(1.1); }
+/* Asiento ocupado: color rojo (clase que añade el JS) */
+.asiento.ocupado { background: var(--ocupado); }
+/* ===== Mensaje y botones ===== */
+/* Mensaje de estado del autobús */
+.mensaje { margin: 16px 0; font-weight: bold; }
+/* Fila de botones */
+.acciones { display: flex; gap: 10px; }
+/* Estilo base de los botones */
+.boton { flex: 1; padding: 12px; border: none; border-radius: 8px; background: var(--ocupado); color: #fff; font-weight: bold; cursor: pointer; }
+/* Botón gris de vaciar */
+.boton-gris { background: #6b7280; }

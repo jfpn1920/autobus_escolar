@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autobus_escolar</title>
+    <link rel="stylesheet" href="autobus_escolar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="autobus_escolar.js" defer></script>
+</head>
+<body>
+    <!------------------------------------>
+    <!--|estructuracion_autobus_escolar|-->
+    <!------------------------------------>
+    <main class="contenedor">
+        <!-- Encabezado con título y descripción -->
+        <header class="encabezado">
+            <h1>🚌 Autobús Escolar</h1>
+            <p>Haz clic en un asiento para marcarlo como libre u ocupado.</p>
+        </header>
+        <!-- Resumen: asientos libres y ocupados -->
+        <section class="resumen">
+            <div class="dato"><span id="libres">24</span><small>Libres</small></div>
+            <div class="dato"><span id="ocupados">0</span><small>Ocupados</small></div>
+            <div class="dato"><span id="porcentaje">0%</span><small>Ocupación</small></div>
+        </section>
+        <!-- Leyenda de colores de los asientos -->
+        <section class="leyenda">
+            <span><i class="muestra libre"></i> Libre</span>
+            <span><i class="muestra ocupado"></i> Ocupado</span>
+        </section>
+        <!-- Cuerpo del autobús: conductor y asientos de los estudiantes -->
+        <section class="bus" id="bus">
+            <!-- Zona del conductor (no se puede marcar) -->
+            <div class="conductor">
+                <span>🧑‍✈️ Conductor</span>
+                <span class="volante">🛞</span>
+            </div>
+            <!-- Fila 1: dos asientos, pasillo y dos asientos -->
+            <div class="fila">
+                <button class="asiento" data-id="0">1</button><button class="asiento" data-id="1">2</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="2">3</button><button class="asiento" data-id="3">4</button>
+            </div>
+            <!-- Fila 2: dos asientos, pasillo y dos asientos -->
+            <div class="fila">
+                <button class="asiento" data-id="4">5</button><button class="asiento" data-id="5">6</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="6">7</button><button class="asiento" data-id="7">8</button>
+            </div>
+            <!-- Fila 3: dos asientos, pasillo y dos asientos -->
+            <div class="fila">
+                <button class="asiento" data-id="8">9</button><button class="asiento" data-id="9">10</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="10">11</button><button class="asiento" data-id="11">12</button>
+            </div>
+            <!-- Fila 4: dos asientos, pasillo y dos asientos -->
+            <div class="fila">
+                <button class="asiento" data-id="12">13</button><button class="asiento" data-id="13">14</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="14">15</button><button class="asiento" data-id="15">16</button>
+            </div>
+            <!-- Fila 5: dos asientos, pasillo y dos asientos -->
+            <div class="fila">
+                <button class="asiento" data-id="16">17</button><button class="asiento" data-id="17">18</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="18">19</button><button class="asiento" data-id="19">20</button>
+            </div>
+            <!-- Fila 6: dos asientos, pasillo y dos asientos -->
+            <div class="fila">
+                <button class="asiento" data-id="20">21</button><button class="asiento" data-id="21">22</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="22">23</button><button class="asiento" data-id="23">24</button>
+            </div>
+        </section>
+        <!-- Mensaje que informa si el autobús está lleno o vacío -->
+        <p class="mensaje" id="mensaje"></p>
+        <!-- Botones para cambiar todos los asientos a la vez -->
+        <section class="acciones">
+            <button id="btn-vaciar" class="boton boton-gris">Vaciar autobús</button>
+            <button id="btn-llenar" class="boton">Llenar autobús</button>
+        </section>
+    </main>
+</body>
+</html>
