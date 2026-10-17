@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autobus_escolar</title>
+    <link rel="stylesheet" href="autobus_escolar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="autobus_escolar.js" defer></script>
+</head>
+<body>
+    <!------------------------------------>
+    <!--|estructuracion_autobus_escolar|-->
+    <!------------------------------------>
+    <main class="contenedor">
+        <header class="encabezado">
+            <h1>🚌 Autobús Escolar</h1>
+            <p>Haz clic en un asiento para marcarlo como libre u ocupado.</p>
+        </header>
+        <!------------------------->
+        <!--|resumen_de_asientos|-->
+        <!------------------------->
+        <section class="resumen">
+            <div class="dato">
+                <span id="libres">24</span>
+                <small>Asientos libres</small>
+            </div>
+            <div class="dato">
+                <span id="ocupados">0</span>
+                <small>Asientos ocupados</small>
+            </div>
+            <div class="dato">
+                <span id="porcentaje">0%</span>
+                <small>Ocupación</small>
+            </div>
+        </section>
+        <!------------------------->
+        <!--|leyenda_de_asientos|-->
+        <!------------------------->
+        <section class="leyenda">
+            <span>
+                <i class="muestra libre"></i>
+                Libre
+            </span>
+            <span>
+                <i class="muestra ocupado"></i>
+                Ocupado
+            </span>
+        </section>
+        <!---------------------------->
+        <!--|estructura_del_autobus|-->
+        <!---------------------------->
+        <section class="bus" id="bus">
+            <div class="conductor">
+                <span>Conductor</span>
+                <i class="fa-solid fa-steering-wheel"></i>
+            </div>
+            <div class="fila">
+                <button class="asiento" data-id="0">1</button>
+                <button class="asiento" data-id="1">2</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="2">3</button>
+                <button class="asiento" data-id="3">4</button>
+            </div>
+            <div class="fila">
+                <button class="asiento" data-id="4">5</button>
+                <button class="asiento" data-id="5">6</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="6">7</button>
+                <button class="asiento" data-id="7">8</button>
+            </div>
+            <div class="fila">
+                <button class="asiento" data-id="8">9</button>
+                <button class="asiento" data-id="9">10</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="10">11</button>
+                <button class="asiento" data-id="11">12</button>
+            </div>
+            <div class="fila">
+                <button class="asiento" data-id="12">13</button>
+                <button class="asiento" data-id="13">14</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="14">15</button>
+                <button class="asiento" data-id="15">16</button>
+            </div>
+            <div class="fila">
+                <button class="asiento" data-id="16">17</button>
+                <button class="asiento" data-id="17">18</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="18">19</button>
+                <button class="asiento" data-id="19">20</button>
+            </div>
+            <div class="fila">
+                <button class="asiento" data-id="20">21</button>
+                <button class="asiento" data-id="21">22</button>
+                <div class="pasillo"></div>
+                <button class="asiento" data-id="22">23</button>
+                <button class="asiento" data-id="23">24</button>
+            </div>
+        </section>
+        <p class="mensaje" id="mensaje">Todos los asientos están libres.</p>
+        <!----------------------->
+        <!--|botones_de_accion|-->
+        <!----------------------->
+        <div class="acciones">
+            <button class="boton boton-gris" id="btn-vaciar">Vaciar autobús</button>
+            <button class="boton" id="btn-llenar">Llenar autobús</button>
+        </div>
+    </main>
+</body>
+</html>
